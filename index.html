@@ -214,43 +214,5 @@
         return needResize;
     }
     </script>
-<head>
-    <meta charset="utf-8" />
-    <title>3D Arrow</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  </head>
-  <body>
-    <script>
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(
-        75,
-        window.innerWidth / window.innerHeight,
-        0.1,
-        1000
-      );
-      const renderer = new THREE.WebGLRenderer();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      document.body.appendChild(renderer.domElement);
-
-      const geometry = new THREE.CylinderGeometry(0, 0.05, 0.3, 12);
-      const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-      const cylinder = new THREE.Mesh(geometry, material);
-      cylinder.translateY(-0.15);
-      scene.add(cylinder);
-
-      const coneGeometry = new THREE.ConeGeometry(0.1, 0.2, 12);
-      const cone = new THREE.Mesh(coneGeometry, material);
-      cone.translateY(0.2);
-      scene.add(cone);
-
-      camera.position.z = 1;
-
-      function animate() {
-        requestAnimationFrame(animate);
-        renderer.render(scene, camera);
-      }
-      animate();
-    </script>
-  </body>
 </body>
 </html>
