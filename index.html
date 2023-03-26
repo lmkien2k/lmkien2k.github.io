@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
     <meta charset="UTF-8">
-    <title>FromTheKing</title>
+    <title>From the King</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <style>
@@ -34,7 +34,7 @@
 <script src="https://cdn.jsdelivr.net/npm/three@0.100.0/examples/js/controls/OrbitControls.js"></script>
 
 <div class="footer">
-    LuongMinhKien
+    lmkien2k
 </div>
 <script>
     const scene = new THREE.Scene();
@@ -68,7 +68,7 @@
         speed.push(Math.random() * 10 + 2);
     }
     
-    const pointsGe  ometry = new THREE.BufferGeometry().setFromPoints(positions);
+    const pointsGeometry = new THREE.BufferGeometry().setFromPoints(positions);
     pointsGeometry.addAttribute("speed", new THREE.BufferAttribute(new Float32Array(speed), 1));
     pointsGeometry.center();
     
@@ -201,7 +201,7 @@
         points.material.uniforms.time.value = time;
         renderer.render(scene, camera);
     });
-    createRainbowText('Love My Queen <3', 5, new THREE.Vector3(0, 60, 0));
+    createRainbowText('Love My Queen', 5, new THREE.Vector3(0, 60, 0));
 
     function resize(renderer) {
         const canvas = renderer.domElement;
